@@ -31,6 +31,11 @@
     margin: 1.25rem 0rem;
 }
 .price{
-    font-family: var(--font-inter);
-    font-size: var(--font-small);
+    font-family: var(--font-bakone);
+    font-size: var(--font-medium);
+}
+.shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
