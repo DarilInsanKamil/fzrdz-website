@@ -1,0 +1,18 @@
+.card_container {
+    padding: var(--card-padding);
+    border-radius: var(--radius-large);
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    margin: var(--gap-normal) 0rem;
+}
+.title {
+    font-size: var(--font-large);
+    font-family: var(--font-bakone);
+    color: var(--text-primary);
+}
+.date {
+    font-size: var(--font-small);
+    font-family: var(--font-inter);
+    color: var(--text-primary);
+}

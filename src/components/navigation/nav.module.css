@@ -1,0 +1,16 @@
+.container {
+    font-family: var(--font-bakone);
+    font-size: var(--font-large);
+}
+.sub_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.list{
+    list-style: none;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+.list:hover {
+    color: var(--text-secondary);
+}

@@ -1,0 +1,13 @@
+.button_container{
+    padding: var(--button-padding);
+    color: var(--text-primary);
+    font-family: var(--font-bakone);
+    border-radius: var(--radius-small);
+    border: 0.5px solid var(--border-color);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+.button_container:hover{
+    box-shadow: var(--boxshadow-button);
+    border: 0.5px solid transparent;
+}
