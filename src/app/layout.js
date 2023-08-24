@@ -1,6 +1,5 @@
 "use client"
 import './globals.css'
-import break_vid from '../assets/image/break_vid.png'
 import { Medsos, Navigation } from '@/components'
 import { Inter } from 'next/font/google'
 import { Bakbak_One } from 'next/font/google'
@@ -25,13 +24,13 @@ const bak_one = Bakbak_One({
 })
 
 
-
 export default function RootLayout({ children }) {
   const router = useRouter()
 
   const navTour = (event) => TourRouter(event, router)
   const navDisco = (event) => DiscoRouter(event, router)
   const navStore = (event) => MerchRouter(event, router)
+
   const metadata= {
     title: 'Fazerdaze',
     description: 'Website music fazerdaze'
