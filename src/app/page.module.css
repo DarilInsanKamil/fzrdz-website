@@ -1,10 +1,14 @@
 .container {
   transition: all 1s ease-in;
 }
+.banner_box{
+  margin: var(--gap-normal) 0px;
+  position: relative;
+}
 .banner_img{
   width: 100%;
-  object-fit: contain;
-  margin: var(--gap-normal) 0px;
+  object-fit: cover;
+  border-radius: var(--radius-large);
 }
 .title{
   font-family: var(--font-bakone);

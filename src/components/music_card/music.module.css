@@ -1,0 +1,30 @@
+.container {
+    margin: var(--gap-normal) 0rem;
+    width: 100%;
+    transition: all 1s ease-in;
+  }
+  .image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-large);
+  }
+  
+  .cover {
+    position: relative;
+    color: var(--text-primary);
+    margin: var(--gap-normal) 0rem;
+  }
+  .player {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+  }
+  .type {
+    font-family: var(--font-inter);
+    font-size: var(--font-small);
+  }
+  .title_cover {
+    font-family: var(--font-bakone);
+    margin: 0.25rem 0rem;
+  }
+  

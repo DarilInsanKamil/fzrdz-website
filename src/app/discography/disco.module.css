@@ -5,12 +5,20 @@
 }
 .image {
   width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-large);
 }
 
 .cover {
   position: relative;
   color: var(--text-primary);
   margin: var(--gap-normal) 0rem;
+}
+.cover:hover {
+  transform: scale(1.01);
+  /* box-shadow: var(--boxshadow-button); */
+  border-radius: var(--radius-large);
+  transition: all 0.2s ease-in-out;
 }
 .player {
   position: absolute;

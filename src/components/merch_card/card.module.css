@@ -10,21 +10,27 @@
     color: var(--text-primary);
     font-family: var(--font-bakone);
     padding: 1.25rem;
-    border-radius: var(--radius-small);
-    border: 1px solid var(--border-color);
-    text-align: center;
     cursor: pointer;
+    background-color: var(--color-white);
 }
 .image{
     object-fit: contain;
-    width: 160px;
-    height: 160px;
+    transition: transform 0.2s;
 }
+.img_box {
+    position: relative;
+    overflow: clip;
+}
+
+.image:hover{
+    transform: rotate(-15deg) scale(1.5);
+}
+
 .title {
     max-width: 200px;
+    margin: 1.25rem 0rem;
 }
 .price{
     font-family: var(--font-inter);
     font-size: var(--font-small);
-    margin-top: 0.5rem;
 }
