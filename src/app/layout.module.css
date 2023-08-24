@@ -5,6 +5,10 @@
   column-gap: 20px;
   color: #fff;
 }
+
+.ham {
+  display: none;
+}
 .container h2 {
   font-family: var(--font-bakone);
   text-align: center;
@@ -40,4 +44,25 @@
   font-size: var(--font-large);
   font-family: var(--font-bakone);
 }
-
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(6, [col-start] 1fr);
+  }
+  .music {
+    grid-column: col-start 1 / span 6;
+    margin: 0px;
+    border-radius: 0px;
+    height: 100vh;
+  }
+  .main {
+    display: none;
+  }
+  .ham {
+    display: block;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

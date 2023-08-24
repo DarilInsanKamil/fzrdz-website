@@ -1,6 +1,6 @@
 "use client"
 import './globals.css'
-import { Medsos, Navigation } from '@/components'
+import { ButtonIcon, Medsos, Navigation } from '@/components'
 import { Inter } from 'next/font/google'
 import { Bakbak_One } from 'next/font/google'
 import { TourRouter, DiscoRouter, MerchRouter } from '@/router'
@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import styles from './layout.module.css'
 import zoom from '../assets/icon/zoom.svg'
+import menu from '../assets/icon/hamburger.svg'
 import { Suspense } from 'react'
 
 const inter = Inter({
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
   const navDisco = (event) => DiscoRouter(event, router)
   const navStore = (event) => MerchRouter(event, router)
 
-  const metadata= {
+  const metadata = {
     title: 'Fazerdaze',
     description: 'Website music fazerdaze'
   }
@@ -43,7 +44,11 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${bak_one.variable} ${styles.container} font-sans`}>
         <Suspense fallback={<p>Loading...</p>}>
           <div className={styles.music}>
-            <h2 className={styles.title_web}>FAZERDAZE</h2>
+            <div className={styles.nav}>
+              <h2 className={styles.title_web}>FAZERDAZE</h2>
+              <Image className={styles.ham} src={menu} alt='test-icon' width={"auto"} height={"auto"} />
+            </div>
+            <h2 className={styles.ham}>WORK IN PROGRESS</h2>
             <section className={styles.player}>
               <section>
                 <p className={styles.title_album}>Break!</p>
