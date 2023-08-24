@@ -1,4 +1,6 @@
 export { TicketCard } from './ticket_card'
 export { Medsos } from './medsos'
 export { Button } from './button'
-export {Navigation} from './navigation'
+export { ButtonIcon } from './button_icon'
+export { CardMerch } from './merch_card'
+export { Navigation } from './navigation'

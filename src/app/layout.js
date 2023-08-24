@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${bak_one.variable} ${styles.container} font-sans`}>
         <Suspense fallback={<p>Loading...</p>}>
           <div className={styles.music}>
-            <h2>FAZERDAZE</h2>
+            <h2 className={styles.title_web}>FAZERDAZE</h2>
             <section className={styles.player}>
               <section>
                 <p className={styles.title_album}>Break!</p>

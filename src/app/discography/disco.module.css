@@ -1,0 +1,22 @@
+.container {
+    margin: var(--gap-normal) 0rem;
+}
+.cover {
+    position: relative;
+    color: var(--text-primary);
+    margin: var(--gap-normal) 0rem;
+}
+.player {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    /* top: 0px; */
+}
+.type {
+    font-family: var(--font-inter);
+    font-size: var(--font-small);
+}
+.title_cover {
+    font-family: var(--font-bakone);
+    margin: 0.25rem 0rem;
+}
