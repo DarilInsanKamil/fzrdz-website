@@ -1,6 +1,8 @@
 .container {
     margin: var(--gap-normal) 0rem;
+    width: 100%;
 }
+
 .cover {
     position: relative;
     color: var(--text-primary);
