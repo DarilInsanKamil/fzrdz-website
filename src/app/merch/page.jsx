@@ -1,8 +1,11 @@
-"use client"
+"use client";
 import React from "react";
-import styles from "./merch.module.css";
 import { CardMerch } from "@/components";
-
+import styles from './merch.module.css'
 export default function Merch() {
-  return <CardMerch />;
+  return (
+    <main className={styles.container}>
+      <CardMerch />
+    </main>
+  );
 }
