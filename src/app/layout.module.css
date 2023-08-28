@@ -16,16 +16,28 @@
 }
 .main {
   grid-column: col-start 5 / span 8;
-  padding: 40px;
+  padding: 20px 40px;
   margin: 20px 20px 20px 0px;
   background-color: white;
   border-radius: 12px;
+}
+.smallmain {
+  grid-column: col-start 12 / span 1;
+  padding: 20px;
+  margin: 20px 20px 20px 0px;
+  background-color: white;
+  border-radius: 12px;
+  transition: all 1s ease-in-out;
 }
 .music {
   grid-column: col-start 1 / span 4;
   margin: 20px 0px 20px 20px;
 }
-
+.widemusic {
+  grid-column: col-start 1 / span 11;
+  margin: 20px 0px 20px 20px;
+  transition: all 1s ease-in-out;
+}
 .player {
   display: flex;
   justify-content: space-between;

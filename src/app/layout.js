@@ -1,6 +1,6 @@
 "use client"
 import './globals.css'
-import { Medsos, Navigation, VideoPlayer, Modal } from '@/components'
+import { Medsos, Navigation, VideoPlayer, Modal, Sidebar } from '@/components'
 import { Inter } from 'next/font/google'
 import { Bakbak_One } from 'next/font/google'
 import { TourRouter, DiscoRouter, MerchRouter } from '@/router'
@@ -24,6 +24,7 @@ const bak_one = Bakbak_One({
 
 export default function RootLayout({ children }) {
   const router = useRouter()
+  const [showSidebar, setShowSidebar] = useState(false)
 
   const navTour = (event) => TourRouter(event, router)
   const navDisco = (event) => DiscoRouter(event, router)
@@ -41,13 +42,18 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${inter.variable} ${bak_one.variable} ${styles.container} font-sans`}>
         <Suspense fallback={<p>Loading...</p>}>
-          <div className={styles.music}>
+          <div className={showSidebar ? styles.widemusic : styles.music}>
             <VideoPlayer />
           </div>
-          <div className={styles.main}>
-            <Navigation tour={navTour} disco={navDisco} store={navStore} />
-            {children}
-            <Medsos />
+          <div className={showSidebar ? styles.smallmain : styles.main}>
+            {
+              showSidebar ? <Sidebar navTour={navTour} navDisc={navDisco} navStore={navStore} handleBtn={() => setShowSidebar(!showSidebar)} /> : <>
+                <Navigation tour={navTour} disco={navDisco} store={navStore} handleBtn={() => setShowSidebar(!showSidebar)} />
+                {children}
+                <Medsos />
+              </>
+            }
+
           </div>
         </Suspense>
       </body>

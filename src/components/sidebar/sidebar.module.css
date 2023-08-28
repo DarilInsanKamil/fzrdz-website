@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+.btn {
+    background-color: transparent;
+    border: 0px;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-between;
+}
+.medsos {
+    display: flex;
+    height: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+}
