@@ -1,14 +1,12 @@
 "use client"
 import './globals.css'
-import { Medsos, Navigation, VideoPlayer } from '@/components'
+import { Medsos, Navigation, VideoPlayer, Modal } from '@/components'
 import { Inter } from 'next/font/google'
 import { Bakbak_One } from 'next/font/google'
 import { TourRouter, DiscoRouter, MerchRouter } from '@/router'
 import { useRouter } from 'next/navigation'
 import styles from './layout.module.css'
-import { Suspense } from 'react'
-
-
+import { Suspense, useState } from 'react'
 
 const inter = Inter({
   subsets: ['latin'],
