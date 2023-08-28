@@ -33,7 +33,7 @@ export const VideoPlayer = () => {
           <iframe
             width={'100%'}
             height={'100%'}
-            src="https://www.youtube.com/embed/0NIt1T6QQxk?si=SapJ6dXQSGY5XeDY"
+            src="https://www.youtube.com/embed/Hjx68WhintI?si=5W0Gdb6RAjyoFthe"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; 
