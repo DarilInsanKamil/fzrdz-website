@@ -11,14 +11,14 @@ const MusicData = [
     },
     {
         id: 2,
-        title: 'Break!',
+        title: 'break!',
         type: 'EP',
         image: break_cover,
         link: 'https://open.spotify.com/intl-id/album/3E6nSXNMIVy4wofjSstjka'
     },
     {
         id: 3,
-        title: 'Come Apart',
+        title: 'come apart',
         type: 'Single',
         image: break_cover,
         link: 'https://open.spotify.com/intl-id/track/3yJqlmzdenTmQeb3bdRJfO'

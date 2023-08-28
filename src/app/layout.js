@@ -1,15 +1,14 @@
 "use client"
 import './globals.css'
-import { ButtonIcon, Medsos, Navigation } from '@/components'
+import { Medsos, Navigation, VideoPlayer } from '@/components'
 import { Inter } from 'next/font/google'
 import { Bakbak_One } from 'next/font/google'
 import { TourRouter, DiscoRouter, MerchRouter } from '@/router'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 import styles from './layout.module.css'
-import zoom from '../assets/icon/zoom.svg'
-import menu from '../assets/icon/hamburger.svg'
 import { Suspense } from 'react'
+
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,6 +35,7 @@ export default function RootLayout({ children }) {
     title: 'Fazerdaze',
     description: 'Website music fazerdaze'
   }
+
   return (
     <html lang="en">
       <head>
@@ -44,18 +44,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${bak_one.variable} ${styles.container} font-sans`}>
         <Suspense fallback={<p>Loading...</p>}>
           <div className={styles.music}>
-            <div className={styles.nav}>
-              <h2 className={styles.title_web}>FAZERDAZE</h2>
-              <Image className={styles.ham} src={menu} alt='test-icon' width={"auto"} height={"auto"} />
-            </div>
-            <h2 className={styles.ham}>WORK IN PROGRESS</h2>
-            <section className={styles.player}>
-              <section>
-                <p className={styles.title_album}>Break!</p>
-                <p className={styles.title_track}>Winter</p>
-              </section>
-              <Image src={zoom} width={'auto'} height={'auto'} alt="zoom-icon" />
-            </section>
+            <VideoPlayer />
           </div>
           <div className={styles.main}>
             <Navigation tour={navTour} disco={navDisco} store={navStore} />
