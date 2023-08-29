@@ -37,6 +37,7 @@ export const VideoPlayer = () => {
         {
           showNav && <NavMobile handlenav={handleNav} />
         }
+        <p>Work In Progress mobile version</p>
         <section className={styles.player}>
           <section>
             <p className={styles.title_album}>Break!</p>

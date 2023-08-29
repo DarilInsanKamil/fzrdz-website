@@ -64,6 +64,8 @@
 }
 @media screen and (max-width: 600px) {
   .container {
+    column-gap: 0px;
+    padding: 0px;
     grid-template-columns: repeat(6, [col-start] 1fr);
   }
   .music {
