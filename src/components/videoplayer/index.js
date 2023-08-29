@@ -2,18 +2,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from './video.module.css'
 import Image from "next/image";
-import zoom from '../../assets/icon/zoom.svg'
+import play from '../../assets/icon/play.svg'
 import menu from '../../assets/icon/hamburger.svg'
-import { Modal, NavMobile } from "..";
+import { ButtonIcon, Modal, NavMobile } from "..";
+import { useRouter } from "next/navigation";
 
 export const VideoPlayer = () => {
-  const [showModal, setShowModal] = useState(false);
+  const router= useRouter()
   const [showNav, setShowNav] = useState(false);
   const videoRef = useRef();
 
   const handleModal = () => {
-    setShowModal(!showModal)
-    setShowNav(false)
+    router.push('https://www.youtube.com/watch?v=Hjx68WhintI')
   }
   const handleNav = () => {
     setShowNav(!showNav)
@@ -37,26 +37,12 @@ export const VideoPlayer = () => {
         {
           showNav && <NavMobile handlenav={handleNav} />
         }
-
-
-        {showModal ? <Modal toggleModal={handleModal}>
-          <iframe
-            width={'100%'}
-            height={'100%'}
-            src="https://www.youtube.com/embed/Hjx68WhintI?si=5W0Gdb6RAjyoFthe"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; 
-        clipboard-write; encrypted-media; 
-        gyroscope; picture-in-picture; muted;
-        web-share" allowFullScreen>
-          </iframe></Modal> : null}
         <section className={styles.player}>
           <section>
             <p className={styles.title_album}>Break!</p>
             <p className={styles.title_track}>Winter</p>
           </section>
-          <Image onClick={handleModal} src={zoom} width={'auto'} height={'auto'} alt="zoom-icon" />
+          <ButtonIcon icon={play} alt={"play-icon"} title={"Play"} click={handleModal}/>
         </section>
       </div>
       <video loop autoPlay muted ref={videoRef} className={styles.videos}>
