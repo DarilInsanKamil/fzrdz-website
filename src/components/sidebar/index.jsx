@@ -12,9 +12,13 @@ export const Sidebar = ({ navTour, navDisc, navStore, handleBtn }) => {
   return (
     <div className={styles.container}>
       <div className={styles.nav}>
-        <button onClick={handleBtn} className={styles.btn}>
-          <Image src={menu} alt="menu-icon" width={18} height={18} />
-        </button>
+        <Image
+          onClick={handleBtn}
+          src={menu}
+          alt="menu-icon"
+          width={18}
+          height={18}
+        />
         <Image
           onClick={navTour}
           src={ticket}

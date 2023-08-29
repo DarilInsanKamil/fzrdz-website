@@ -5,6 +5,9 @@
   column-gap: 20px;
   color: #fff;
   height: 100vh;
+  column-gap: 20px;
+  width: 100%;
+  padding: 20px;
 }
 
 .ham {
@@ -18,25 +21,25 @@
   grid-column: col-start 5 / span 8;
   background-color: #fff;
   padding: 40px;
-  margin: 20px 20px 20px 0px;
   border-radius: var(--radius-large);
 }
 .smallmain {
   grid-column: col-start 12 / span 1;
-  padding: 40px 0px;
-  margin: 20px 20px 20px 0px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  justify-self: flex-end;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 12px;
   transition: all 0.2s ease-in-out;
+
 }
 .music {
   grid-column: col-start 1 / span 4;
-  margin: 20px 0px 20px 20px;
   transition: all 0.2s ease-in-out;
 }
 .widemusic {
   grid-column: col-start 1 / span 11;
-  margin: 20px 0px 20px 20px;
   transition: all 0.2s ease-in-out;
   height: 100vh;
 }

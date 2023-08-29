@@ -1,26 +1,21 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-}
-.btn {
-    background-color: transparent;
-    border: 0px;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: #fff;
 }
 .nav {
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%;
 }
 .medsos {
-    display: flex;
-    height: 20%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  height: 20%;
+  flex-direction: column;
+  justify-content: space-between;
 }
