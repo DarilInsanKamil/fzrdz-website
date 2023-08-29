@@ -4,14 +4,18 @@ import styles from './video.module.css'
 import Image from "next/image";
 import zoom from '../../assets/icon/zoom.svg'
 import menu from '../../assets/icon/hamburger.svg'
-import { Modal } from "..";
+import { Modal, NavMobile } from "..";
 
 export const VideoPlayer = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showNav, setShowNav] = useState(false);
   const videoRef = useRef();
 
   const handleModal = () => {
     setShowModal(!showModal)
+  }
+  const handleNav = () => {
+    setShowNav(!showNav)
     console.log(showModal);
   }
 
@@ -27,19 +31,24 @@ export const VideoPlayer = () => {
       <div className={styles.wrapper}>
         <div className={styles.nav}>
           <h2 className={styles.title_web}>FAZERDAZE</h2>
-          <Image className={styles.ham} src={menu} alt='test-icon' width={"auto"} height={"auto"} />
+          <Image onClick={handleNav} className={styles.ham} src={menu} alt='test-icon' width={"auto"} height={"auto"} />
         </div>
+        {
+          showNav && <NavMobile handlenav={handleNav} />
+        }
+
+
         {showModal ? <Modal toggleModal={handleModal}>
           <iframe
             width={'100%'}
             height={'100%'}
             src="https://www.youtube.com/embed/Hjx68WhintI?si=5W0Gdb6RAjyoFthe"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; 
         clipboard-write; encrypted-media; 
         gyroscope; picture-in-picture; muted;
-        web-share" allowfullscreen>
+        web-share" allowFullScreen>
           </iframe></Modal> : null}
         <section className={styles.player}>
           <section>
