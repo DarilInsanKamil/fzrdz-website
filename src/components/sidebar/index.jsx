@@ -13,34 +13,34 @@ export const Sidebar = ({ navTour, navDisc, navStore, handleBtn }) => {
     <div className={styles.container}>
       <div className={styles.nav}>
         <button onClick={handleBtn} className={styles.btn}>
-          <Image src={menu} alt="menu-icon" width={20} height={20} />
+          <Image src={menu} alt="menu-icon" width={18} height={18} />
         </button>
         <Image
           onClick={navTour}
           src={ticket}
           alt="ticket-icon"
-          width={20}
-          height={20}
+          width={18}
+          height={18}
         />
         <Image
           onClick={navDisc}
           src={music}
           alt="music-icon"
-          width={20}
-          height={20}
+          width={18}
+          height={18}
         />
         <Image
           onClick={navStore}
           src={store}
           alt="store-icon"
-          width={20}
-          height={20}
+          width={18}
+          height={18}
         />
       </div>
       <div className={styles.medsos}>
-        <Image src={instagram} alt="instagram-icon" width={20} height={20} />
-        <Image src={twitter} alt="twitter-icon" width={20} height={20} />
-        <Image src={ytb} alt="ytb-icon" width={"auto"} height={"auto"} />
+        <Image src={instagram} alt="instagram-icon" width={18} height={18} />
+        <Image src={twitter} alt="twitter-icon" width={18} height={18} />
+        <Image src={ytb} alt="ytb-icon" width={18} height={18} />
       </div>
     </div>
   );

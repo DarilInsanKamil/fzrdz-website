@@ -6,6 +6,7 @@
     border: 0.5px solid var(--border-color);
     background-color: var(--color-white);
     cursor: pointer;
+    font-size: var(--font-small);
 }
 .button_container:hover{
     box-shadow: var(--boxshadow-button);

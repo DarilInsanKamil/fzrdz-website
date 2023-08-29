@@ -18,7 +18,7 @@ export default function Tour() {
           draggable="false"
         />
       </section>
-      <h3 className={styles.title}>SOLO NZ TOUR</h3>
+      <h4 className={styles.title}>SOLO NZ TOUR</h4>
       <TicketCard />
     </main>
   );

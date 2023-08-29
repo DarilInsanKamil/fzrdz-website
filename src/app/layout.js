@@ -53,7 +53,6 @@ export default function RootLayout({ children }) {
                 <Medsos />
               </>
             }
-
           </div>
         </Suspense>
       </body>

@@ -15,6 +15,18 @@ const TicketData = [
         title: 'The Loons, Christcruch',
         date: 'Friday, 11 August'
     },
+    {
+        title: 'Tenis Indoor Senayan',
+        date: 'Friday, 11 Sep'
+    },
+    {
+        title: 'Tenis Indoor Senayan',
+        date: 'Friday, 11 Sep'
+    },
+    {
+        title: 'Tenis Indoor Senayan',
+        date: 'Friday, 11 Sep'
+    },
 ]
 
 export default TicketData;

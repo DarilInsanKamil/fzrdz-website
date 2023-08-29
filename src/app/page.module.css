@@ -1,6 +1,23 @@
 .container {
   transition: all 1s ease-in;
+  max-height: 80vh;
+  overflow-y: scroll;
+  margin-top: 20px;
 }
+
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+.container::-webkit-scrollbar-thumb {
+  background: rgb(214, 131, 131);
+  border-radius: 25px;
+  height: 5px;
+}
+.container::-webkit-scrollbar-track {
+  background-color: rgb(233, 233, 233);
+}
+
+
 .banner_box{
   margin: var(--gap-normal) 0px;
   position: relative;
@@ -12,6 +29,6 @@
 }
 .title{
   font-family: var(--font-bakone);
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   color: var(--text-primary);
 }
