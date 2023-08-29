@@ -13,10 +13,11 @@ export const VideoPlayer = () => {
 
   const handleModal = () => {
     setShowModal(!showModal)
+    setShowNav(false)
   }
   const handleNav = () => {
     setShowNav(!showNav)
-    console.log(showModal);
+    setShowModal(false)
   }
 
   useEffect(() => {

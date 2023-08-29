@@ -6,15 +6,7 @@
 }
 
 .container::-webkit-scrollbar {
-  width: 5px;
-}
-.container::-webkit-scrollbar-thumb {
-  background: rgb(214, 131, 131);
-  border-radius: 25px;
-  height: 5px;
-}
-.container::-webkit-scrollbar-track {
-  background-color: rgb(233, 233, 233);
+  width: 0px;
 }
 
 

@@ -35,7 +35,36 @@ const MerchData = [
         price: 302000000,
         img_product: cap
     },
-    
+    {
+        id: 11,
+        title: `Fazerdaze / Break! EP 12" Vinyl`,
+        price: 377000000,
+        img_product: vinyl
+    },
+    {
+        id: 12,
+        title: `Break / Embroidered Faded Black T-Shirt`,
+        price: 402000000,
+        img_product: t_shirt_break
+    },
+    {
+        id: 13,
+        title: `Manta / Faded Black T-Shirt`,
+        price: 402000000,
+        img_product: t_shirt_manta
+    },
+    {
+        id: 14,
+        title: `Flood Into / Screen Printed Black Tote Bag`,
+        price: 302000000,
+        img_product: totebag_flood_into
+    },
+    {
+        id: 15,
+        title: `FZRDZ / Embroidred Patrol Blue Cap`,
+        price: 302000000,
+        img_product: cap
+    },
 
 ]
 
