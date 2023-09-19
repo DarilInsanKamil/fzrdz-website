@@ -10,7 +10,7 @@ export const Navigation = ({tour, disco, store, handleBtn}) => {
         <li className={styles.list} onClick={disco}>Discography</li>
         <li className={styles.list} onClick={store}>Store</li>
       </ul>
-      <Image onClick={handleBtn} src={close} alt="close-icon" width={16} height={16}/>
+      <Image onClick={handleBtn} src={close} alt="close-icon" className={styles.clsobtn} width={16} height={16}/>
     </div>
   );
 }

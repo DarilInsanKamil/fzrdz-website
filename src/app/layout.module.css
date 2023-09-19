@@ -27,6 +27,7 @@
   grid-column: col-start 12 / span 1;
   padding: 40px;
   display: flex;
+  width: 80px;
   justify-content: center;
   justify-self: flex-end;
   background-color: rgba(255, 255, 255, 1);
@@ -41,6 +42,7 @@
   grid-column: col-start 1 / span 11;
   transition: all 0.2s ease-in-out;
   height: 100vh;
+  margin-right: -20px;
 }
 .player {
   display: flex;

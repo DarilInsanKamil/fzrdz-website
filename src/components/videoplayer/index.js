@@ -8,13 +8,14 @@ import { ButtonIcon, Modal, NavMobile } from "..";
 import { useRouter } from "next/navigation";
 
 export const VideoPlayer = () => {
-  const router= useRouter()
+  const router = useRouter()
   const [showNav, setShowNav] = useState(false);
   const videoRef = useRef();
 
   const handleModal = () => {
     router.push('https://www.youtube.com/watch?v=Hjx68WhintI')
   }
+
   const handleNav = () => {
     setShowNav(!showNav)
     setShowModal(false)
@@ -43,7 +44,9 @@ export const VideoPlayer = () => {
             <p className={styles.title_album}>Break!</p>
             <p className={styles.title_track}>Winter</p>
           </section>
-          <ButtonIcon icon={play} alt={"play-icon"} title={"Play"} click={handleModal}/>
+          <a target="_blank" href="https://www.youtube.com/watch?v=Hjx68WhintI">
+            <ButtonIcon icon={play} alt={"play-icon"} title={"Play"} />
+          </a>
         </section>
       </div>
       <video loop autoPlay muted ref={videoRef} className={styles.videos}>

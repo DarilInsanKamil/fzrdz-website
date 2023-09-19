@@ -5,7 +5,6 @@ import { TicketCard, VideoPlayer } from "@/components";
 import styles from "./page.module.css";
 
 export default function Tour() {
-
   return (
     <main className={styles.container}>
       <section className={styles.banner_box}>
@@ -17,8 +16,8 @@ export default function Tour() {
           className={styles.banner_img}
           draggable="false"
         />
+        <h4 className={styles.title}>SOLO NZ TOUR</h4>
       </section>
-      <h4 className={styles.title}>SOLO NZ TOUR</h4>
       <TicketCard />
     </main>
   );

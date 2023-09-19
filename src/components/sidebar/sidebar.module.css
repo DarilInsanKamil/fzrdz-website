@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 30%;
+  cursor: pointer;
 }
 .medsos {
   display: flex;
