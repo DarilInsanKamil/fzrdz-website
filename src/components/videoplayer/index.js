@@ -18,7 +18,6 @@ export const VideoPlayer = () => {
 
   const handleNav = () => {
     setShowNav(!showNav)
-    setShowModal(false)
   }
 
   useEffect(() => {

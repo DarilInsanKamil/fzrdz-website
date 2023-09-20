@@ -9,14 +9,6 @@
 .container::-webkit-scrollbar {
   width: 0px;
 }
-/* .container::-webkit-scrollbar-thumb {
-  background: rgb(214, 131, 131);
-  border-radius: 25px;
-  height: 5px;
-}
-.container::-webkit-scrollbar-track {
-  background-color: rgb(233, 233, 233);
-}  */
 
 .image {
   width: 100%;
@@ -48,4 +40,18 @@
 .title_cover {
   font-family: var(--font-bakone);
   margin: 0.25rem 0rem;
+}
+
+.title_mobile {
+  display: none;
+  font-family: var(--font-bakone);
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  .title_mobile {
+    display: block;
+    text-align: center;
+  }
 }

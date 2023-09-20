@@ -11,6 +11,7 @@ import Link from "next/link";
 export default function Disocgraphy() {
   return (
     <main className={styles.container}>
+      <h2 className={styles.title_mobile}>Discography</h2>
         <MusicList />
     </main>
   )
