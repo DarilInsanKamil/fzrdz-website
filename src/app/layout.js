@@ -7,6 +7,7 @@ import { TourRouter, DiscoRouter, MerchRouter } from '@/router'
 import { useRouter } from 'next/navigation'
 import styles from './layout.module.css'
 import { Suspense, useState } from 'react'
+import { useWindowSize } from '@/utils/screen_size'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,7 +26,7 @@ const bak_one = Bakbak_One({
 export default function RootLayout({ children }) {
   const router = useRouter()
   const [showSidebar, setShowSidebar] = useState(false)
-
+  const size = useWindowSize();
   const navTour = (event) => TourRouter(event, router)
   const navDisco = (event) => DiscoRouter(event, router)
   const navStore = (event) => MerchRouter(event, router)
@@ -40,21 +41,26 @@ export default function RootLayout({ children }) {
       <head>
         <title>FAZERDAZE</title>
       </head>
-      <body className={`${inter.variable} ${bak_one.variable} ${styles.container} font-sans`}>
-        <Suspense fallback={<p>Loading...</p>}>
-          <div className={showSidebar ? styles.widemusic : styles.music}>
-            <VideoPlayer />
-          </div>
-          <div className={showSidebar ? styles.smallmain : styles.main}>
-            {
-              showSidebar ? <Sidebar navTour={navTour} navDisc={navDisco} navStore={navStore} handleBtn={() => setShowSidebar(!showSidebar)} /> : <>
-                <Navigation tour={navTour} disco={navDisco} store={navStore} handleBtn={() => setShowSidebar(!showSidebar)} />
-                {children}
-                <Medsos />
-              </>
-            }
-          </div>
-        </Suspense>
+      <body className={`${inter.variable} ${bak_one.variable} font-sans`}>
+        {
+          size.width >= 600 ? <div className={styles.container} fallback={<p>Loading...</p>}>
+            <div className={showSidebar ? styles.widemusic : styles.music}>
+              <VideoPlayer />
+            </div>
+            <div className={showSidebar ? styles.smallmain : styles.main}>
+              {
+                showSidebar ? <Sidebar navTour={navTour} navDisc={navDisco} navStore={navStore} handleBtn={() => setShowSidebar(!showSidebar)} /> : <>
+                  <Navigation tour={navTour} disco={navDisco} store={navStore} handleBtn={() => setShowSidebar(!showSidebar)} />
+                  {children}
+                  <Medsos />
+                </>
+              }
+            </div>
+          </div> :
+            <div className={styles.container2}>
+              <VideoPlayer />
+            </div>
+        }
       </body>
     </html>
   )

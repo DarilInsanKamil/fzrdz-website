@@ -8,6 +8,7 @@
 .container::-webkit-scrollbar {
   width: 0px;
 }
+
 .banner_box{
   position: sticky;
   top: 0;
