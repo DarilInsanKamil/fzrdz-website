@@ -57,6 +57,10 @@
   color: var(--text-primary);
   font-family: var(--font-bakone);
   align-items: flex-start;
+  position: absolute;
+  top: 0;
+  width: 90%;
+  margin-top: 60px;
 }
 .mobile ul li {
   list-style: none;
