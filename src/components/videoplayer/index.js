@@ -4,13 +4,19 @@ import styles from './video.module.css'
 import Image from "next/image";
 import play from '../../assets/icon/play.svg'
 import menu from '../../assets/icon/hamburger.svg'
+import close from '../../assets/icon/close_white.svg'
 import { ButtonIcon, Modal, NavMobile } from "..";
 import { useRouter } from "next/navigation";
+import { DiscoRouter, MerchRouter, TourRouter } from "@/router/routersidebar";
 
 export const VideoPlayer = () => {
   const router = useRouter()
   const [showNav, setShowNav] = useState(false);
   const videoRef = useRef();
+
+  const navTour = (event) => TourRouter(event, router, setShowNav, showNav)
+  const navDisco = (event) => DiscoRouter(event, router, setShowNav, showNav)
+  const navStore = (event) => MerchRouter(event, router, setShowNav, showNav)
 
   const handleModal = () => {
     router.push('https://www.youtube.com/watch?v=Hjx68WhintI')
@@ -32,10 +38,16 @@ export const VideoPlayer = () => {
       <div className={styles.wrapper}>
         <div className={styles.nav}>
           <h2 className={styles.title_web}>FAZERDAZE</h2>
-          <Image onClick={handleNav} className={styles.ham} src={menu} alt='test-icon' width={"auto"} height={"auto"} />
+          <Image onClick={handleNav} className={styles.ham} src={showNav ? close : menu} alt='test-icon' width={"auto"} height={"auto"} />
         </div>
         {
-          showNav && <NavMobile handlenav={handleNav} />
+          showNav && <div className={styles.mobile}>
+            <ul>
+              <li onClick={navTour}>Tour</li>
+              <li onClick={navDisco}>Discography</li>
+              <li onClick={navStore}>Store</li>
+            </ul>
+          </div>
         }
         <section className={styles.player}>
           <section>

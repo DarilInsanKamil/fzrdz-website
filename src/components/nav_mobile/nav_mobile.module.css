@@ -1,7 +1,6 @@
 .container {
     background-color: #fff;
     display: flex;
-    padding: 20px;
     border-radius: 8px;
     justify-content: space-between;
     color: var(--text-primary);

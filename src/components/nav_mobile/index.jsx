@@ -17,9 +17,6 @@ export const NavMobile = ({handlenav}) => {
         <li onClick={navDisco}>Discography</li>
         <li onClick={navStore}>Store</li>
       </ul>
-      <button onClick={handlenav}>
-        <Image src={close} alt="icon-close" width={16} height={16}/>
-      </button>
     </div>
   );
 };
